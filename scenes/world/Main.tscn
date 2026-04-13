@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://yywi1kapd88e"]
+
+[ext_resource type="PackedScene" uid="uid://ba1ugdq4gn8wb" path="res://scenes/player/Player.tscn" id="1_v6u7x"]
+[ext_resource type="PackedScene" uid="uid://bjypihu1qmi8b" path="res://scenes/enemies/enemy.tscn" id="2_431da"]
+[ext_resource type="Script" uid="uid://ybtrgm3awveo" path="res://scripts/WaveSpawner.gd" id="3_6ryrm"]
+[ext_resource type="PackedScene" uid="uid://bqbpj2dmyqfjd" path="res://scenes/ui/HUD.tscn" id="4_0nnu2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ryrm"]
+size = Vector2(3500, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nnu2"]
+size = Vector2(3500, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nciap"]
+size = Vector2(20, 2000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10578"]
+size = Vector2(20, 2000)
+
+[node name="Main" type="Node2D" unique_id=1230258881]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1603814736]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.039215688, 0.039215688, 0.07058824, 1)
+
+[node name="Player" parent="." unique_id=500858113 instance=ExtResource("1_v6u7x")]
+position = Vector2(959, 539)
+
+[node name="Enemy" parent="." unique_id=781536976 instance=ExtResource("2_431da")]
+position = Vector2(700, 400)
+
+[node name="WaveSpawner" type="Node" parent="." unique_id=836951355]
+script = ExtResource("3_6ryrm")
+
+[node name="MapBorders" type="StaticBody2D" parent="." unique_id=201178513]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapBorders" unique_id=1740429387]
+position = Vector2(1750, -10)
+shape = SubResource("RectangleShape2D_6ryrm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MapBorders" unique_id=1676311096]
+position = Vector2(1750, 2010)
+shape = SubResource("RectangleShape2D_0nnu2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="MapBorders" unique_id=1357107824]
+position = Vector2(-10, 1000)
+shape = SubResource("RectangleShape2D_nciap")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="MapBorders" unique_id=2123293082]
+position = Vector2(3510, 1000)
+shape = SubResource("RectangleShape2D_10578")
+
+[node name="Hud" parent="." unique_id=1068947340 instance=ExtResource("4_0nnu2")]

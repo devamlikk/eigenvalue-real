@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://ifmcsnaciv55"]
+
+[ext_resource type="Script" uid="uid://b2m7jumxtx55m" path="res://scripts/WeaponSelect.gd" id="1_pbpb8"]
+
+[node name="WeaponSelect" type="Control" unique_id=1495283951]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pbpb8")
+
+[node name="Label" type="Label" parent="." unique_id=1632412508]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 168.0
+offset_right = 663.0
+offset_bottom = 205.0
+text = "Choose Your Weapon"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1309307854]
+layout_mode = 0
+offset_left = 388.0
+offset_top = 208.0
+offset_right = 788.0
+offset_bottom = 608.0
+
+[node name="VectorBtn" type="Button" parent="VBoxContainer" unique_id=1008945063]
+layout_mode = 2
+text = "Vector (AR / Pistol)
+"
+
+[node name="DivergenceBtn" type="Button" parent="VBoxContainer" unique_id=583148049]
+layout_mode = 2
+text = "Divergence (Shotgun)"
+
+[node name="CurlBtn" type="Button" parent="VBoxContainer" unique_id=1342935078]
+layout_mode = 2
+text = "Curl (Spinning Orbs)"
+
+[node name="GradientBtn" type="Button" parent="VBoxContainer" unique_id=23989500]
+layout_mode = 2
+text = "Gradient (Sniper)"
+
+[node name="EigenbeamBtn" type="Button" parent="VBoxContainer" unique_id=2109336636]
+layout_mode = 2
+text = "Eigenbeam (Rapidfire SMG)"
+
+[node name="NullspaceBtn" type="Button" parent="VBoxContainer" unique_id=1686804411]
+layout_mode = 2
+text = "Nullspace (RPG)"
+
+[connection signal="pressed" from="VBoxContainer/VectorBtn" to="." method="_on_vector_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/DivergenceBtn" to="." method="_on_divergence_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/CurlBtn" to="." method="_on_curl_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/GradientBtn" to="." method="_on_gradient_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/EigenbeamBtn" to="." method="_on_eigenbeam_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/NullspaceBtn" to="." method="_on_nullspace_btn_pressed"]

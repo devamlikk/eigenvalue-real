@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bqbpj2dmyqfjd"]
+
+[ext_resource type="Script" uid="uid://dc4v3hqvy1okq" path="res://scripts/HUD.gd" id="1_kw0id"]
+
+[node name="Hud" type="CanvasLayer" unique_id=1068947340]
+script = ExtResource("1_kw0id")
+
+[node name="WaveLabel" type="Label" parent="." unique_id=1145155031]
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.859
+anchor_right = 0.048
+anchor_bottom = 0.859
+offset_left = -20.296001
+offset_top = -11.632019
+offset_right = 19.703999
+offset_bottom = 11.367981
+grow_horizontal = 2
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1511930486]
+anchors_preset = -1
+anchor_left = 0.266
+anchor_top = 0.859
+anchor_right = 0.266
+anchor_bottom = 0.859
+offset_left = -19.432007
+offset_top = -11.632019
+offset_right = 20.567993
+offset_bottom = 11.367981
+grow_horizontal = 0
+
+[node name="ChargeBar" type="ProgressBar" parent="." unique_id=1779633164]
+anchors_preset = -1
+anchor_left = 0.15400001
+anchor_top = 0.90800005
+anchor_right = 0.15400001
+anchor_bottom = 0.90800005
+offset_left = -149.40802
+offset_top = -13.384033
+offset_right = 151.59192
+offset_bottom = 13.615967
+
+[node name="HPBar" type="ProgressBar" parent="." unique_id=1570900581]
+anchors_preset = -1
+anchor_left = 0.155
+anchor_top = 0.95600003
+anchor_right = 0.155
+anchor_bottom = 0.95600003
+offset_left = -150.56
+offset_top = -13.488037
+offset_right = 149.44006
+offset_bottom = 13.511963
+grow_horizontal = 2
+grow_vertical = 0

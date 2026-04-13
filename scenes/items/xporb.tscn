@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://lt8dgqx25ile"]
+
+[ext_resource type="Texture2D" uid="uid://ebncwhtw34kg" path="res://assets/sprites/effects/xp_orb.png" id="1_gd02p"]
+[ext_resource type="Script" uid="uid://dimdmf2xwaequ" path="res://scripts/XPOrb.gd" id="1_sg2wo"]
+
+[node name="Xporb" type="Area2D" unique_id=1750658587]
+scale = Vector2(0.5, 0.5)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_sg2wo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=281961760]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=755608894]
+texture = ExtResource("1_gd02p")

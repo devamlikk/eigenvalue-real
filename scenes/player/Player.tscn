@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ba1ugdq4gn8wb"]
+
+[ext_resource type="Script" uid="uid://b4vit0u3x6rd1" path="res://scripts/Player.gd" id="1_gfjak"]
+[ext_resource type="Texture2D" uid="uid://c70vwv80wuasx" path="res://assets/sprites/player/player.png" id="1_wr5hl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dovo2"]
+radius = 34.058773
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmlin"]
+radius = 80.0
+
+[node name="Player" type="CharacterBody2D" unique_id=500858113]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_gfjak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=34422919]
+position = Vector2(-20, 0)
+shape = SubResource("CircleShape2D_dovo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=827670563]
+scale = Vector2(2, 2)
+texture = ExtResource("1_wr5hl")
+
+[node name="PickupRange" type="Area2D" parent="." unique_id=1942411200]
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupRange" unique_id=228644348]
+position = Vector2(-10, 0)
+shape = SubResource("CircleShape2D_gmlin")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=302670670]
+limit_left = 0
+limit_top = 0
+limit_right = 3500
+limit_bottom = 2000
